@@ -3,36 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>郭家妤</title>
+    <title>郭家妤的個人簡介</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f2f4f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            opacity: 0.9;
         }
 
         section {
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
+            background-color: white;
+            margin: 30px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        h1, h2 {
+        h2 {
             text-align: center;
+            margin-top: 0;
+            color: #4a90e2;
+            font-size: 1.8em;
         }
 
         img {
-            float: right;
-            margin-left: 10px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .text {
+            flex: 1 1 60%;
+        }
+
+        .image {
+            flex: 1 1 200px;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         ul li {
@@ -41,18 +91,45 @@
 
         ul li a {
             text-decoration: none;
-            color: #007BFF;
+            color: #4a90e2;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         ul li a:hover {
+            color: #1c3d73;
             text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85em;
+            color: #888;
+            background-color: #eaeaea;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .image {
+                text-align: center;
+            }
+
+            .image img {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>郭家妤</h1>
-        <p style="text-align: center;"><sub>5b3g0046</sub></p>
+        <p><sub>5b3g0046</sub></p>
     </header>
 
     <section id="menu">
@@ -67,31 +144,65 @@
 
     <section id="future-goals">
         <h2>未來夢想</h2>
-        <img src="1.png" width="200px" height="180px" alt="未來夢想相關圖片">
-        <p>
-            我一直相信，科技不應該只存在於螢幕之中，它也可以走進我們的生活空間，讓我們的居住環境更智慧、更人性化。
-            於是，我萌生了一個夢想——把資訊設計與室內設計結合，開發出一套真正改變空間體驗的程式。
-            想像一下，一個程式不只能讓使用者看到平面圖，更可以透過3D模擬、AI演算法，依據個人習慣與風格自動生成空間佈局。
-            你只需要輸入需求，它就能即時調整光線配置、家具擺設，甚至模擬真實環境中的動線流暢度。
-        </p>
+        <div class="content">
+            <div class="image">
+                <img src="1.png" alt="未來夢想相關圖片">
+            </div>
+            <div class="text">
+                <p>
+                    我一直相信，科技不應該只存在於螢幕之中，它也可以走進我們的生活空間，讓我們的居住環境更智慧、更人性化。
+                </p>
+                <p>
+                    於是，我萌生了一個夢想——把資訊設計與室內設計結合，開發出一套真正改變空間體驗的程式。
+                    想像一下，一個程式不只能讓使用者看到平面圖，更可以透過 3D 模擬、AI 演算法，
+                    依據個人習慣與風格自動生成空間佈局。
+                </p>
+                <p>
+                    你只需要輸入需求，它就能即時調整光線配置、家具擺設，甚至模擬真實環境中的動線流暢度。
+                </p>
+            </div>
+        </div>
     </section>
 
     <section id="short-term-goals">
         <h2>短期目標</h2>
-        <img src="2.jpg" width="200px" height="180px" alt="短期目標相關圖片">
-        <p>希望我可以順利畢業。</p>
+        <div class="content">
+            <div class="image">
+                <img src="2.jpg" alt="短期目標相關圖片">
+            </div>
+            <div class="text">
+                <p>希望我可以順利畢業。為了這個目標，我會一步步完成課程與專題，堅持到最後一刻！</p>
+            </div>
+        </div>
     </section>
 
     <section id="interests">
         <h2>最有興趣的事</h2>
-        <img src="3.jpg" width="200px" height="200px" alt="興趣相關圖片">
-        <p>只要跟柯南有關的我都有興趣。</p>
+        <div class="content">
+            <div class="image">
+                <img src="3.jpg" alt="興趣相關圖片">
+            </div>
+            <div class="text">
+                <p>只要跟《名偵探柯南》有關的事，我都超有興趣！動畫、漫畫、電影我都追，真相只有一個！</p>
+            </div>
+        </div>
     </section>
 
     <section id="current-challenges">
         <h2>我對目前階段的困擾</h2>
-        <img src="4.jfif" width="200px" height="200px" alt="困擾相關圖片">
-        <p>歷史好難QAQ。</p>
+        <div class="content">
+            <div class="image">
+                <img src="4.jfif" alt="困擾相關圖片">
+            </div>
+            <div class="text">
+                <p>歷史好難 QAQ，背誦與理解總是花很多時間，有時真的會讓我感到沮喪，但我會努力找出學習的好方法！</p>
+            </div>
+        </div>
     </section>
+
+    <footer>
+        © 2025 郭家妤 All rights reserved.
+    </footer>
+
 </body>
 </html>
